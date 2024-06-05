@@ -23,7 +23,7 @@ const AddProducts = () => {
 
     const data = { title, brand, price, description, image_url };
     const token = localStorage.getItem('token');
-    await fetch("http://localhost:4000/cameras", {
+    await fetch("https://eshop-server-theta.vercel.app/cameras", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -89,7 +89,7 @@ const AddProducts = () => {
 
           <div className="mt-2 flex justify-center items-center">
             <input
-              className="btn mt-4 w-full bg-red-500 text-white p-4"
+              className="btn mt-4 mx-auto btn-success w-50 bg-red-500 text-white p-4"
               type="submit"
               value="Add product"
             />

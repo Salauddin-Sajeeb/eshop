@@ -13,7 +13,7 @@ const GoogleLogin = () => {
           email: data?.user?.email,
           name: data?.user?.displayName,
         };
-        fetch("http://localhost:4000/user", {
+        fetch("https://eshop-server-theta.vercel.app/user", {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

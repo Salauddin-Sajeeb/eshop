@@ -12,6 +12,7 @@ import ProductDetails from "../pages/ProductDetails";
 import AllProducts from "../pages/AllProducts";
 import AddProducts from "../pages/AddProducts";
 import EditProducts from "../pages/EditProducts";
+import EditProfile from "../pages/EditProfile";
 
 export const router = createBrowserRouter([
   {
@@ -22,13 +23,13 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:3000/shoes"),
+        loader: () => fetch("https://eshop-server-theta.vercel.app/cameras"),
       },
       {
         path: "/products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/cameras/${params.id}`),
+          fetch(`https://eshop-server-theta.vercel.app/cameras/${params.id}`),
       },
       {
         path: "/about",
@@ -45,6 +46,12 @@ export const router = createBrowserRouter([
       {
         path: "/all-products",
         element: <AllProducts />,
+      },
+      {
+        path: "/edit-profile/edit/:id",
+        element: <EditProfile />,
+        loader: ({ params }) =>
+          fetch(`https://eshop-server-theta.vercel.app/user/${params.id}`),
       },
     ],
   },
@@ -85,7 +92,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/cameras/${params.id}`),
+          fetch(`https://eshop-server-theta.vercel.app/cameras/${params.id}`),
       },
     ],
   },

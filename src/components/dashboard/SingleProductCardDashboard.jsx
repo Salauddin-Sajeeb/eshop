@@ -14,7 +14,7 @@ const SingleProductCardDashboard = ({ data, onDelete }) => {
       // Do nothing!
       return
     }
-    await fetch(`http://localhost:4000/shoes/${_id}`, {
+    await fetch(`https://eshop-server-theta.vercel.app/shoes/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
