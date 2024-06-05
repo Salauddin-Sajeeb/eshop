@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bannerBg{
+    background-image: url("/public/banner.jpg");
+    object-fit: cover;
+    max-height: 700px;
+}
