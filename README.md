@@ -73,6 +73,7 @@ node app.js
 ```
 
 7. In a new terminal, start the frontend:
-
+```
+for locally run server use http://localhost:4000
 ```
 npm run dev
