@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { useEffect, useState } from "react";
 
 
 const Navbar = () => {
   const { logout, user } = useAuth();
+  const [info, setInfo] = useState()
+  useEffect(() => {
+    fetch(`https://eshop-server-theta.vercel.app/user/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => setInfo(data));
 
+  }, [user]);
   const handleLogout = async () => {
     await logout()
   }
+
 
   return (
 
@@ -73,7 +81,7 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">eshop</a>
+        <a href="/" className="btn btn-ghost text-xl">eshop</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -104,19 +112,39 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end space-x-2">
-        {user && (
-          <button
-            onClick={handleLogout}
-            className="btn bg-info text-white hidden lg:block"
-          >
-            Logout
-          </button>
 
-        )}
+        <div className="flex-none gap-2">
 
-        <div className="avatar online">
-          <div className="w-12 rounded-full border-2 border-black">
-            <img src={user?.photoURL || "/public/placeholder.jpg"} />
+
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+              </div>
+            </div>
+            {user && (
+              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                <li>
+                  <a className="btn btn-primary-content">
+                    <span className=" "> {info?.name}</span>
+                  </a>
+                </li>
+                <li>
+                  <a className="btn btn-primary-content">
+                    <span className=" ">{info?.email}</span>
+                  </a>
+                </li>
+                <li className='btn btn-primary-content bg-success text-bold'>
+                  <Link to={`/edit-profile/edit/${user.email}`}>Edit Profile</Link>
+
+                </li>
+
+                <li className=' btn btn-primary-content bg-error' onClick={handleLogout}>Logout</li>
+
+              </ul>
+
+            )}
+
           </div>
         </div>
       </div>

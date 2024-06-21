@@ -41,13 +41,13 @@ const EditProducts = () => {
   return (
     <div>
 
-      <h1 className="text-5xl font-bold text-center">Edit Product</h1>
+      <h1 className="text-3xl font-bold text-center mt-10">Edit Product</h1>
 
-      <div className="my-16">
+      <div className="my-10">
         <form onSubmit={handleSubmit}>
-          <div className="mt-2">
+          <div className="mt-2 flex justify-center items-center mx-auto">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-100 border border-black rounded-lg"
               type="text"
               name="title"
               placeholder="Title"
@@ -55,9 +55,9 @@ const EditProducts = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
-          <div className="mt-2">
+          <div className=" mt-2 flex justify-center items-center mx-auto">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-75 border border-black rounded-lg"
               type="text"
               name="brand"
               placeholder="Brand"
@@ -65,9 +65,9 @@ const EditProducts = () => {
               onChange={(e) => setBrand(e.target.value)}
             />
           </div>
-          <div className="mt-2">
+          <div className="mt-2 flex justify-center items-center mx-auto">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-75 border border-black rounded-lg"
               type="number"
               name="price"
               placeholder="Price"
@@ -75,9 +75,9 @@ const EditProducts = () => {
               onChange={(e) => setPrice(e.target.value)}
             />
           </div>
-          <div className="mt-2">
+          <div className="mt-2 flex justify-center items-center mx-auto">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-75 border border-black rounded-lg"
               type="text"
               name="description"
               placeholder="Description"
@@ -85,9 +85,9 @@ const EditProducts = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
-          <div className="mt-2">
+          <div className="mt-2 flex justify-center items-center mx-auto">
             <input
-              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              className="bg-gray-100 p-4 w-75 border border-black rounded-lg"
               type="text"
               name="image_url"
               placeholder="Image URL"
@@ -97,7 +97,7 @@ const EditProducts = () => {
           </div>
           <div className="mt-2 flex justify-center items-center">
             <input
-              className="btn mt-4 w-full bg-red-500 text-white p-4"
+              className="btn mt-4 w-50 bg-red-500 text-white p-4"
               type="submit"
               value="Edit product"
             />

@@ -23,14 +23,14 @@ const Login = () => {
     console.log(email, password);
 
     await signIn(email, password);
-
+    notify()
   };
 
   useEffect(() => {
     if (user) {
       navigate(from, { replace: true });
     }
-    notify()
+
   }, [user, from, navigate]);
 
   return (

@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import "./contact.css"
 const Body = () => {
     return (
         <div>
-            <div className="my-16 flex flex-wrap gap-4">
+            <div className="my-6 flex flex-wrap gap-4">
                 <div className="card w-96 bg-primary text-primary-content ml-5 shadow-2xl ">
                     <div className="card-body">
                         <h2 className="card-title">Millions of business offerings</h2>
@@ -40,16 +40,14 @@ const Body = () => {
                     <div className='text-2xl font-bold mx-3 px-2' ><h1 className=' text-orange-600'>10</h1><p>District</p></div>
                 </div>
             </div>
-            <div className='bg-primary text-primary-content  w-100 h-80 pt-5'>
+            <div className='bg-black text-primary-content  w-100 h-80 pt-5'>
                 <p className='mb-5 text-5xl font-bold text-center pt-5'>Ready to get started? <br /><span className='text-2xl font-bold'>Explore millions of products from trusted suppliers by signing up today!</span> <br /><span className='btn text-center btn-neutral px-5 mt-5 '>
 
 
                     <Link to={"/register"}>Sign up</Link></span></p>
 
             </div>
-            <div className='card bg-primary'>
 
-            </div>
 
         </div>
     );
