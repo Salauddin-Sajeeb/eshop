@@ -23,7 +23,7 @@ const AddProducts = () => {
 
     const data = { title, brand, price, description, image_url };
     const token = localStorage.getItem('token');
-    await fetch("https://eshop-server-theta.vercel.app/cameras", {
+    await fetch("https://eshop-server-6y0a.onrender.com/cameras", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

@@ -23,13 +23,13 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("https://eshop-server-theta.vercel.app/cameras"),
+        loader: () => fetch("https://eshop-server-6y0a.onrender.com/cameras"),
       },
       {
         path: "/products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`https://eshop-server-theta.vercel.app/cameras/${params.id}`),
+          fetch(`https://eshop-server-6y0a.onrender.com/cameras/${params.id}`),
       },
       {
         path: "/about",
@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
         path: "/edit-profile/edit/:id",
         element: <EditProfile />,
         loader: ({ params }) =>
-          fetch(`https://eshop-server-theta.vercel.app/user/${params.id}`),
+          fetch(`https://eshop-server-6y0a.onrender.com/user/${params.id}`),
       },
     ],
   },
@@ -92,7 +92,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://eshop-server-theta.vercel.app/cameras/${params.id}`),
+          fetch(`https://eshop-server-6y0a.onrender.com/cameras/${params.id}`),
       },
     ],
   },

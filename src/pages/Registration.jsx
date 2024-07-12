@@ -36,7 +36,7 @@ const Registration = () => {
             email: email,
             name: name,
           };
-          fetch("https://eshop-server-theta.vercel.app/user", {
+          fetch("https://eshop-server-6y0a.onrender.com/user", {
             method: 'POST',
             headers: {
               'content-type': 'application/json'

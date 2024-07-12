@@ -6,7 +6,7 @@ const DashNavbar = () => {
     const { logout, user } = useAuth();
     const [info, setInfo] = useState()
     useEffect(() => {
-        fetch(`https://eshop-server-theta.vercel.app/user/${user?.email}`)
+        fetch(`https://eshop-server-6y0a.onrender.com/user/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setInfo(data));
 

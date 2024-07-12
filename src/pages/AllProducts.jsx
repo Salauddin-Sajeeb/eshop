@@ -5,7 +5,7 @@ const AllProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://eshop-server-theta.vercel.app/cameras")
+    fetch("https://eshop-server-6y0a.onrender.com/cameras")
       .then((res) => res.json())
       .then((data) => setProducts(data));
 

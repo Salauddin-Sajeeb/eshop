@@ -29,7 +29,7 @@ export default function EditProfile() {
         };
 
         fetch(
-            `https://eshop-server-theta.vercel.app/user/${data?.email}`,
+            `https://eshop-server-6y0a.onrender.com/user/${data?.email}`,
             {
                 method: "PATCH",
                 headers: {

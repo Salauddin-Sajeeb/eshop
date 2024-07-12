@@ -25,7 +25,7 @@ const EditProducts = () => {
     const token = localStorage.getItem("token");
     e.preventDefault();
     const data2 = { title, brand, price, description, image_url };
-    await fetch(`https://eshop-server-theta.vercel.app/cameras/${data._id}`, {
+    await fetch(`https://eshop-server-6y0a.onrender.com/cameras/${data._id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
